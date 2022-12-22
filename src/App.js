@@ -2,7 +2,7 @@
 import './App.css';
 import React from "react";
 import Toolbar from './component/navigation/toolbar';
-import { BrowserRouter as Router,Route } from 'react-router-dom';
+import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import About from './component/pages/homepage/About';
 // import {Formik,Form,Field,ErrorMessage} from 'formik'
 // import * as yup from 'yup'
@@ -16,12 +16,14 @@ import About from './component/pages/homepage/About';
 function App(){
   return (
     <div  >
+      <Router>
+
       <Toolbar />
       {/* {Show?<sidebar/>:""} */}
       <layout/>
-      <Router>
+      <Routes>
         <Route path='/about' exact elements={<About />}/>
-      </Router>
+      </Routes>
       <footer/>
       {/* <Formik 
       initialValues={{
@@ -70,7 +72,7 @@ function App(){
         }}
 
       </Formik> */}
-
+</Router>
     </div>
 
   )

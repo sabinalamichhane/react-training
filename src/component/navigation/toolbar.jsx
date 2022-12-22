@@ -4,7 +4,7 @@ import Header from './header'
 function Toolbar() {
   return (
     <div className='bg-maincolor'>
-        <div className='bg-subcolor'></div>
+        <div className='bg-red-600'></div>
         <Header />
     </div>
   )
